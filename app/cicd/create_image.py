@@ -42,10 +42,15 @@ try:
     print(result.stdout)
     print(result.stderr)
 
-    # load the image into minikube
-    result = subprocess.run(["minikube", "image", "load", f"otel-logs-ingestion-app:{version}"], capture_output=True, text=True)
+    # load the image into minikube after removing it first
+    subprocess.run(["minikube", "image", "rm", "otel-logs-ingestion-app:latest"], capture_output=True, text=True)
     print(result.stdout)
     print(result.stderr)
+    print("Old image removed from minikube.")
+    result = subprocess.run(["minikube", "image", "load", "otel-logs-ingestion-app:latest"], capture_output=True, text=True)
+    print(result.stdout)
+    print(result.stderr)
+    print("Image built and loaded into minikube successfully.")
 
     
 except Exception as e:

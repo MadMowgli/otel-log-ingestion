@@ -6,7 +6,7 @@ from pathlib import Path
 
 def setup_logging(
     name: str = "app",
-    log_file: str = "logs/app.log",
+    log_file: str = "var/log/hello-world-app.log",
     level: int = logging.INFO,
 ) -> logging.Logger:
     """

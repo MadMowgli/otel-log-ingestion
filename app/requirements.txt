@@ -1,6 +1,7 @@
 annotated-doc==0.0.4
 annotated-types==0.7.0
 anyio==4.13.0
+asgiref==3.11.1
 certifi==2026.5.20
 click==8.4.1
 detect-installer==0.1.0
@@ -19,6 +20,12 @@ Jinja2==3.1.6
 markdown-it-py==4.2.0
 MarkupSafe==3.0.3
 mdurl==0.1.2
+opentelemetry-api==1.42.1
+opentelemetry-instrumentation==0.63b1
+opentelemetry-instrumentation-asgi==0.63b1
+opentelemetry-semantic-conventions==0.63b1
+opentelemetry-util-http==0.63b1
+packaging==26.2
 pydantic==2.13.4
 pydantic-extra-types==2.11.1
 pydantic-settings==2.14.1
@@ -41,3 +48,4 @@ uvicorn==0.48.0
 uvloop==0.22.1
 watchfiles==1.2.0
 websockets==16.0
+wrapt==2.2.1
