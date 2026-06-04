@@ -1,0 +1,1 @@
+kubectl port-forward -n app-namespace svc/hello-world-service 8000:8000
