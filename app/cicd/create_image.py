@@ -42,6 +42,12 @@ try:
     print(result.stdout)
     print(result.stderr)
 
+    # load the image into minikube
+    result = subprocess.run(["minikube", "image", "load", f"otel-logs-ingestion-app:{version}"], capture_output=True, text=True)
+    print(result.stdout)
+    print(result.stderr)
+
+    
 except Exception as e:
     print("Error:", e)
     exit(1)
